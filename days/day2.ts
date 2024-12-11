@@ -37,7 +37,7 @@ function isSafeReport(report: Array<number>, withTolerance = true): boolean {
 }
 
 export async function dayTwoPartOne() {
-	const sampleData = await openPuzzleInput('./day2/day2_1.txt');
+	const sampleData = await openPuzzleInput('./data/day2.txt');
 
 	const lines = sampleData.map(line => line.split(' ').map(Number));
 
@@ -55,7 +55,7 @@ export async function dayTwoPartOne() {
 }
 
 export async function dayTwoPartTwo() {
-	const sampleData = await openPuzzleInput('./day2/day2_1.txt');
+	const sampleData = await openPuzzleInput('./data/day2.txt');
 
 	const lines = sampleData.map(line => line.split(' ').map(Number));
 

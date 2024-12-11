@@ -1,6 +1,6 @@
 import { TextLineStream } from 'jsr:@std/streams@1.0.8';
 
-export async function openPuzzleInput(fileName: string) {
+export async function openPuzzleInput(fileName: string, multipleLines = true) {
 	const file = await Deno.open(fileName);
 	const lines = [];
 
@@ -13,7 +13,11 @@ export async function openPuzzleInput(fileName: string) {
 			lines.push(line);
 		}
 
-		return lines;
+		if (multipleLines) {
+			return lines;
+		}
+
+		return [lines.join('')];
 	} catch (error) {
 		file.close();
 		console.error('Error reading file', error);
