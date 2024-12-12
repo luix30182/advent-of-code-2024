@@ -1,5 +1,5 @@
-import { dayThrePartTwo } from './days/day3.ts';
+import { dayFourPartOne } from './days/day4.ts';
 
 if (import.meta.main) {
-	dayThrePartTwo();
+	dayFourPartOne();
 }
